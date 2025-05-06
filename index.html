@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .quote-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #quote {
+            font-size: 24px;
+            font-style: italic;
+        }
+        #refresh {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #refresh:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <p id="quote"></p>
+        <button id="refresh" onclick="window.location.reload()">New Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            // Motivational Quotes
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "Success is not the absence of obstacles, but the courage to push through them.",
+            "Your time is limited, so don’t waste it living someone else’s life. – Steve Jobs",
+            "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
+            "The harder you work for something, the greater you’ll feel when you achieve it.",
+            "Dream big and dare to fail. – Norman Vaughan",
+            "What you get by achieving your goals is not as important as what you become by achieving your goals. – Zig Ziglar",
+            "Believe you can and you’re halfway there. – Theodore Roosevelt",
+
+            // Humorous Quotes
+            "I’m not lazy, I’m on energy-saving mode.",
+            "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+            "Why don’t programmers prefer dark mode? Because the light attracts bugs.",
+            "My wallet is like an onion: opening it makes me cry.",
+            "I’m not arguing, I’m just explaining why I’m right.",
+            "I don’t need a hair stylist, my pillow gives me a new hairstyle every morning.",
+            "If at first you don’t succeed, skydiving is not for you.",
+            "I’m not clumsy, the floor just loves me too much.",
+            "I put my phone in airplane mode, but it’s still not flying.",
+            "Behind every great man is a woman rolling her eyes. – Jim Carrey"
+        ];
+
+        // Select a random quote
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        // Display the quote
+        document.getElementById("quote").textContent = randomQuote;
+    </script>
+</body>
+</html>
